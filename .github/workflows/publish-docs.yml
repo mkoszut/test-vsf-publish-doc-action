@@ -9,7 +9,14 @@ jobs:
         id: hello
         uses: vuestorefront/publish-docs-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          user-id: 'userid'
+          api-key: 'apikey'
+          name: 'name'
+          tag: 'tag'
+          image: 'image'
+          path: 'path'
+          port: 'port'
+          has-base-path: false
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
