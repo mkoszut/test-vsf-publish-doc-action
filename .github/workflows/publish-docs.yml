@@ -1,16 +1,16 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  publish_vsf_docs_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Publish VSF doc
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Publish VSF doc
+        id: publish
         uses: vuestorefront/publish-docs-action@main
         with:
-          user-id: 'userid'
-          api-key: 'apikey'
+          user-id: ${{ secrets.DOCS_CLOUD_USERNAME }}
+          api-key: ${{ secrets.DOCS_CLOUD_PASSWORD }}
           name: 'name'
           tag: 'tag'
           image: 'image'
