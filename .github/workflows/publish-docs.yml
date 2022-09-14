@@ -7,16 +7,16 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: vuestorefront/publish-docs-action@v1
+        uses: vuestorefront/publish-docs-action@main
         with:
-          image: 'image'
-          path: 'path'
-          port: 'port'
-          has-base-path: false
           user-id: 'userid'
           api-key: 'apikey'
           name: 'name'
           tag: 'tag'
+          image: 'image'
+          path: 'path'
+          port: 'port'
+          has-base-path: false
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
